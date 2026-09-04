@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Hand Gesture Control</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>🤲 AI Hand Gesture Recognition</h1>
+        <div class="controls">
+            <button id="startBtn">Start Camera</button>
+            <button id="stopBtn" disabled>Stop Camera</button>
+        </div>
+        <div class="camera-section">
+            <video id="video" autoplay muted playsinline width="640" height="480" style="display: none;"></video>
+            <canvas id="canvas" width="640" height="480"></canvas>
+        </div>
+        <div class="gesture-display">
+            <h2>Detected Gesture: <span id="gesture">No gesture detected</span></h2>
+        </div>
+        <div id="error" class="error hidden"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
